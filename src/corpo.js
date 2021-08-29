@@ -1,9 +1,14 @@
 import Categoria from "./categoria";
 
-export default function Corpo({menu, liberaBotao, setLiberaBotao}){ 
+export default function Corpo({menu, pedido, setPedido}){ 
     return(
     <main>    
-        {menu.map((menu, index) => <Categoria menu={menu} key={index} liberaBotao={liberaBotao} setliberaBotao={setLiberaBotao}/>)}
+        {menu.map((menu, index) => 
+        <Categoria 
+        menu={menu} 
+        key={index} 
+        pedido={pedido} 
+        setPedido={setPedido}/>)}
     </main>
     );
 }
